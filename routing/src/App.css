@@ -1,0 +1,10 @@
+/* Сделаем контейнер по центру экрана */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, p, ul {
+  text-align: center;
+}
