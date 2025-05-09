@@ -4,6 +4,7 @@ import { books } from './booksDB';
 
 const BookDetailPage = () => {
     const { id } = useParams();
+    console.log(id);
     const book = books.find((b) => b.id === parseInt(id));
 
     if (!book) {

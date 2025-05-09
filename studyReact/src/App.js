@@ -19,11 +19,15 @@ import TodoList from './components/TodiList';
 import TodoList2 from './components/TodoList2';
 import Toggle from './components/Toggle';
 import TestComp from './components/Test';
+import Box from './components/Box';
+import ListPageMain from './components/listPageApp/ListPageMain';
 
 function App() {
 
   return (
     <>
+      <ListPageMain />
+
       <TodoList2 />
       <TemperatureConverter />
       <FormInput />
@@ -61,6 +65,14 @@ function App() {
       <TestComp render={(data) => (
         <div>{data}</div>
       )} />
+
+      <Box style={{ border: '1px solid black' }}>
+        <h1>Hello</h1>
+        <h2>Hello2</h2>
+      </Box>
+
+
+
     </>
   );
 }
