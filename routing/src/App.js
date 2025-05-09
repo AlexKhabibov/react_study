@@ -5,7 +5,7 @@ import MainListApp from './components/tetsApp2/MainListApp';
 function App() {
   return (
     <>
-      {/* <Main /> */}
+      <Main />
 
       <MainListApp />
     </>
