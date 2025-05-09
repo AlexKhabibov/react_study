@@ -1,9 +1,14 @@
-import Main from "./components/main";
 import './App.css';
+import Main from './components/testApp/main';
+import MainListApp from './components/tetsApp2/MainListApp';
 
 function App() {
   return (
-    <Main />
+    <>
+      {/* <Main /> */}
+
+      <MainListApp />
+    </>
   );
 }
 
