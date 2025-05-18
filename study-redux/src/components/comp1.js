@@ -1,8 +1,8 @@
 import Comp2 from "./comp2";
 
-function Comp1({name}) {
+function Comp1() {
     return ( 
-        <Comp2 name={name}/>
+        <Comp2/>
      );
 }
 
