@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import ThemeContext from './components/themeContext';
 import ThemedBlock from './components/ThemedBlock';
+import { HelloWithDefaultName } from './components/hoc/WithDefaultName';
+import { CompButtonWithStyles } from './components/hoc2Styles/withStyles';
 
 function App() {
   const lightTheme = { background: 'lightgray', color: 'black' };
@@ -16,12 +18,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <ThemeContext.Provider value={theme}>
-        <ThemedBlock />
-        <button onClick={toggleTheme}>Сменить тему</button>
-      </ThemeContext.Provider>
-    </div>
+    <>
+      <div className="App">Изучаем React Context
+        <ThemeContext.Provider value={theme}>
+          <ThemedBlock />
+          <button onClick={toggleTheme}>Сменить тему</button>
+        </ThemeContext.Provider>
+      </div>
+
+      <div className='App'>
+        Изучаем HOC
+        <HelloWithDefaultName name='Alex' />
+        {/* по умолчанию будет имя гость */}
+      </div >
+
+      <div className='App'>
+        HOC стилизация компонентов
+        <CompButtonWithStyles />
+      </div>
+    </>
   );
 }
 
