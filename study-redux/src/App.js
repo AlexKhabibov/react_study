@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import './App.css';
-import ThemeContext from './components/themeContext';
-import ThemedBlock from './components/ThemedBlock';
+import ThemeContext from './components/context/themeContext';
+import ThemedBlock from './components/context/ThemedBlock';
 import { HelloWithDefaultName } from './components/hoc/WithDefaultName';
 import { CompButtonWithStyles } from './components/hoc2Styles/withStyles';
+import Counter from './components/redux/Counter';
+import { Provider } from 'react-redux';
+import { store } from './components/redux/store';
+
 
 function App() {
   const lightTheme = { background: 'lightgray', color: 'black' };
@@ -35,6 +39,14 @@ function App() {
       <div className='App'>
         HOC стилизация компонентов
         <CompButtonWithStyles />
+      </div>
+
+      <div className='App'>
+        Работа Redux store
+        <Provider store={store}>
+          {/* без провайдера не будет работать стор */}
+          <Counter />
+        </Provider>
       </div>
     </>
   );
