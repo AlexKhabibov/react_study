@@ -1,10 +1,9 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 function Counter() {
 
     const counter = useSelector(state => state); // для получения данных о состоянии из стор
-    const dispatch = useDispatch(); // для изменения состояния в стор через action
+    const dispatch = useDispatch(); // хук для изменения состояния в стор через action
 
     const increment = () => {
         dispatch({ type: 'INCREMENT' })
