@@ -6,18 +6,24 @@ function Counter() {
     const dispatch = useDispatch(); // хук для изменения состояния в стор через action
 
     const increment = () => {
-        dispatch({ type: 'INCREMENT' })
+        return {
+            type: 'INCREMENT',
+            payload: 1
+        };
     };
 
     const decrement = () => {
-        dispatch({ type: 'DECREMENT' })
+        return {
+            type: 'DECREMENT',
+            payload: 1
+        };
     };
 
     return (
         <div>
             <h1>Счетчик: {counter}</h1>
-            <button onClick={increment}>Плюс 1</button>
-            <button onClick={decrement}>Минус 1</button>
+            <button onClick={() => dispatch(increment())}>Плюс 1</button>
+            <button onClick={() => dispatch(decrement())}>Минус 1</button>
         </div>
     );
 }

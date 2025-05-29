@@ -4,9 +4,9 @@ import ThemeContext from './components/context/themeContext';
 import ThemedBlock from './components/context/ThemedBlock';
 import { HelloWithDefaultName } from './components/hoc/WithDefaultName';
 import { CompButtonWithStyles } from './components/hoc2Styles/withStyles';
-import Counter from './components/redux/Counter';
+import Counter from './components/redux/Counter/Counter';
 import { Provider } from 'react-redux';
-import { counterStore } from './components/redux/store';
+import { counterStore } from './components/redux/Counter/store';
 import Loading from './components/testHOC2/Loading';
 import WithLoadingIndicator from './components/testHOC2/WithLoadingIndicator';
 import Counter2 from './components/TestRedux/Counter2';
@@ -71,6 +71,7 @@ function App() {
           <Counter2 />
         </Provider>
       </div>
+
 
     </>
   );
